@@ -10,8 +10,8 @@ COPY builder/builder.sh /usr/bin/builder.sh
 CMD ["/bin/sh", "/usr/bin/builder.sh"]
 
 ARG version="1.0.3"
-ARG plugins="git,cors,realip,expires,cache,cloudflare,route53"
-ARG enable_telemetry="true"
+ARG plugins="route53"
+ARG enable_telemetry="false"
 
 # process wrapper
 RUN go get -v github.com/abiosoft/parent
