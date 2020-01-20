@@ -5,7 +5,7 @@ FROM golang:1.13-alpine as builder
 
 RUN apk add --no-cache git gcc musl-dev
 
-COPY builder.sh /usr/bin/builder.sh
+COPY builder/builder.sh /usr/bin/builder.sh
 
 CMD ["/bin/sh", "/usr/bin/builder.sh"]
 
